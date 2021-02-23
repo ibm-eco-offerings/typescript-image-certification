@@ -21,6 +21,8 @@ LABEL release="1234"
 LABEL summary="My sample microservice"
 LABEL description="This is a microservice for doing something great."
 
+COPY ./licenses licenses
+
 ENV HOST=0.0.0.0 PORT=3000
 
 EXPOSE 3000/tcp
