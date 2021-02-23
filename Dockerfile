@@ -14,6 +14,13 @@ COPY --from=builder /opt/app-root/src/public public
 COPY --from=builder /opt/app-root/src/package.json .
 RUN npm install --production
 
+LABEL name="my-image"
+LABEL vendor="My Company, Inc."
+LABEL version="1.0.0"
+LABEL release="1234"
+LABEL summary="My sample microservice"
+LABEL description="This is a microservice for doing something great."
+
 ENV HOST=0.0.0.0 PORT=3000
 
 EXPOSE 3000/tcp
